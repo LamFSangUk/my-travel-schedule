@@ -1,0 +1,5 @@
+schedules:
+  - short_desc: 집에서 출발
+    start_time: 5:00 AM
+  - short_desc: 인천국제공항 도착
+    start_time: 6:30 AM

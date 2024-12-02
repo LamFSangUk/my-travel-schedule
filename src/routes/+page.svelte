@@ -1,9 +1,12 @@
-<script>
-  // Tabs configuration
-  const tabs = ['Home', 'Profile', 'Settings'];
+<script lang="ts">
+  import type { PageServerData } from "./$types";
+
+  export let data: PageServerData;
+
+  let { tabs } = data;
 
   // Reactive variable to track the active tab
-  let activeTab = 'Home';
+  let activeTab = tabs[0].name;
 </script>
 
 <style>
@@ -37,26 +40,21 @@
 
 <!-- Tabs -->
 <div class="tabs">
-  {#each tabs as tab}
+  {#each tabs as { name }}
     <div
-      class="tab {tab === activeTab ? 'active' : ''}"
-      on:click={() => (activeTab = tab)}
+      class="tab {name === activeTab ? 'active' : ''}"
+      on:click={() => (activeTab = name)}
     >
-      {tab}
+      {name}
     </div>
   {/each}
 </div>
 
 <!-- Tab Content -->
 <div class="tab-content">
-  {#if activeTab === 'Home'}
-    <h2>Welcome to the Home tab!</h2>
-    <p>This is the home content.</p>
-  {:else if activeTab === 'Profile'}
-    <h2>Welcome to your Profile tab!</h2>
-    <p>This is your profile content.</p>
-  {:else if activeTab === 'Settings'}
-    <h2>Settings</h2>
-    <p>Here you can adjust your preferences.</p>
-  {/if}
+  {#each tabs as { name, schedules }}
+    {#if name === activeTab}
+      <p>{schedules}</p>
+    {/if}
+  {/each}
 </div>
