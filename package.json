@@ -25,6 +25,7 @@
 	"dependencies": {
 		"@sveltejs/adapter-node": "^5.2.9",
 		"@types/js-yaml": "^4.0.9",
-		"js-yaml": "^4.1.0"
+		"js-yaml": "^4.1.0",
+		"svelte-collapsible": "^0.3.1"
 	}
 }

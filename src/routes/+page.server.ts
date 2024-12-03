@@ -39,3 +39,6 @@ export const load: PageServerLoad = async () => {
 
   return {tabs: tabs};
 }
+
+// Disable server-side rendering to get client date info.
+export const ssr=false;
