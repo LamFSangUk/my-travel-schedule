@@ -1,5 +1,102 @@
 schedules:
-  - short_desc: 집에서 출발
-    start_time: 5:00 AM
-  - short_desc: 인천국제공항 도착
-    start_time: 6:30 AM
+  - type: tour
+    short_desc: 호텔에서 출발
+    start_time: 8:30 AM
+    desc: 
+    memo: 
+      - 호텔 조식 7시 - 10시
+  - type: transportation
+    short_desc: 이나리역 이동
+    duration: 30m
+    options:
+      - name: 전차 이동
+        seq:
+          - name: 도보
+            duration: 15m
+            start: 오리엔탈 호텔 교토 로쿠조 
+            dest: 교토역
+            desc: 
+          - name: 나라 선
+            duration: 15m
+            start: 교토역 
+            dest: 이나리역
+            desc: 
+  - type: tour
+    short_desc: 후시미 이나리 신사
+    start_time: 9:15 AM
+    desc: 후시미 이나리 신사 및 주변 산책
+    memo: 
+      - 산책보단 등산에 가까움 / 편한 신발 필수
+      - 신사 왕복 1시간 정도 소요
+  - type: meal
+    short_desc: 점심 식사
+    start_time: 11:30 AM
+    options:
+      - name: 이나리 묘다이 도하치
+        kind: 우동, 일본 가정식
+      - name: 테우치 우동
+        kind: 우동, 덮밥
+  - type: transportation
+    short_desc: 나라로 이동
+    duration: 1h
+    options:
+      - name: 전차 이동
+        seq:
+          - name: 게이한 본선
+            duration: 5m
+            start: 후시미이나리 역
+            dest: 긴테쓰탄바바시 역
+            desc: 
+          - name: 킨테쓰 특급
+            duration: 55m
+            start: 단바바시 역 
+            dest: 긴테쓰나라 역
+            desc: 
+  - type: tour
+    short_desc: 나라 공원
+    start_time: 1:30 PM
+    desc: 나라 공원 관광 / 사슴 구경 / 도다이지 관람
+    memo:
+     - 입구에서 센베 사기 (사슴 먹이 용)
+  - type: tour
+    short_desc: 도다이지
+    start_time: 2:30 PM
+    desc: 
+    memo:
+  - type: tour
+    short_desc: 고후쿠지
+    start_time: 3:30 PM
+    desc: 
+    memo:
+  - type: tour
+    short_desc: 나라 시장 구경
+    start_time: 4:00 PM
+    desc: 나라 역 앞 아케이드 구경 및 군것질
+    memo:
+      - 나라 역 앞 아케이드 구경
+      - 킨테쓰 특급은 매시 10분 / 25분 / 50분 마다
+  - type: transportation
+    short_desc: 교토 역 이동
+    duration: 40m
+    options:
+      - name: 전차 이동
+        seq:
+          - name: 킨테쓰 특급
+            duration: 40m
+            start: 긴테쓰나라
+            dest: 교토
+            desc: 
+  - type: meal
+    short_desc: 저녁 식사
+    start_time: 6:30 PM
+    desc: 
+    options:
+      - name: 토미센
+        kind: 스시
+      - name: Yakiniku Daisuke
+        kind: 야키니쿠
+  - type: tour
+    short_desc: 호텔 복귀
+    start_time: 9:00 PM
+    desc: 오리엔탈 호텔 교토 로쿠조
+    memo: 

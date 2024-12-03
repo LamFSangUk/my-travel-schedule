@@ -1,5 +1,145 @@
 schedules:
-  - short_desc: 집에서 출발
-    start_time: 5:00 AM
-  - short_desc: 인천국제공항 도착
-    start_time: 6:30 AM
+  - type: tour
+    short_desc: 호텔에서 출발
+    start_time: 8:30 AM
+    desc: 
+    memo: 
+      - 호텔 조식 7시 - 10시
+  - type: transportation
+    short_desc: 아라시야마로 이동
+    duration: 40m
+    options:
+      - name: 버스 이동
+        seq:
+          - name: 버스 28번
+            duration: 40m
+            start: 호리카와고조 
+            dest: 아라시야마코엔
+            desc: 
+  - type: tour
+    short_desc: 도게츠교 도착
+    start_time: 9:15 AM
+    desc: 도보로 도게츠교 주변 관람
+    memo: 
+      - 건너서 아라비아카 커피 혹은 카페에서 모닝커피 한 잔
+  - type: tour
+    short_desc: 아라시야마 치쿠린 관람
+    start_time: 9:45 AM
+    desc: 도보로 대나무 숲 관람
+    memo: 
+  - type: transportation
+    short_desc: 도보 이동
+    duration: 
+    options:
+      - name: 도보 이동
+        seq:
+          - name: 도보
+            duration: 15m
+            start: 아라시야마 치쿠린
+            dest: 아다시노넨부츠지
+            desc: 
+  - type: tour
+    short_desc: 아다시노넨부츠지 관람
+    start_time: 11:00 AM
+    desc: 아다시노넨부츠지 관람
+    memo: 
+      - 치쿠린에서 걸어서 25분 정도 거리
+  - type: transportation
+    short_desc: 도보 이동
+    duration: 
+    options:
+      - name: 도보 이동
+        seq:
+          - name: 도보
+            duration: 15m
+            start: 아다시노넨부츠지
+            dest: 식당
+            desc: 
+  - type: meal
+    short_desc: 점심 식사
+    start_time: 11:45 AM
+    options:
+      - name: 아자시노
+        kind: 일본 가정식
+      - name: 카페 다이닝 세라
+        kind: 일본 가정식
+  - type: transportation
+    short_desc: 료안지로 이동
+    duration: 50m
+    options:
+      - name: 버스 이동
+        seq:
+          - name: 버스 11번
+            duration: 25m
+            start: 사가쇼갓코마에
+            dest: 야마고에나카초
+            desc: 
+          - name: 버스 59번
+            duration: 25m
+            start: 야마고에나카초 
+            dest: 료안지마에
+            desc: 
+  - type: tour
+    short_desc: 료안지
+    start_time: 1:30 PM
+    desc: 료안지 관광
+    memo:
+  - type: transportation
+    short_desc: 금각사로 이동
+    duration: 
+    options:
+      - name: 버스 이동
+        seq:
+          - name: 버스 59번
+            duration: 10m
+            start: 료안지마에
+            dest: 킨카쿠지미치
+            desc: 
+  - type: tour
+    short_desc: 금각사
+    start_time: 3:30 PM
+    desc: 금각사 관광
+    memo:
+  - type: transportation
+    short_desc: 니시키 시장 이동
+    duration: 
+    options:
+      - name: 버스 이동
+        seq:
+          - name: 버스 59번
+            duration: 10m
+            start: 킨카쿠지미치
+            dest: 시조카와라마치
+            desc: 
+      - name: 버스 이동
+        seq:
+          - name: 버스 12번
+            duration: 10m
+            start: 킨카쿠지미치
+            dest: 시조타카쿠라
+            desc: 
+  - type: tour
+    short_desc: 니시키 시장
+    start_time: 5:30 PM
+    desc: 니시키 시장 관광 및 근처 쇼핑
+    memo:
+  - type: meal
+    short_desc: 저녁 식사
+    start_time: 6:30 PM
+    desc: 
+    options:
+      - name: 토미센
+        kind: 스시
+      - name: Yakiniku Daisuke
+        kind: 야키니쿠
+      - name: 쿠치바시 모단
+        kind: 야키토리 
+  - type: transportation
+    short_desc: 버스 이동
+    duration: 
+    options: 
+  - type: tour
+    short_desc: 호텔 복귀
+    start_time: 9:00 PM
+    desc: 오리엔탈 호텔 교토 로쿠조
+    memo: 

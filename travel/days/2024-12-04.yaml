@@ -1,5 +1,126 @@
 schedules:
-  - short_desc: 집에서 출발
+  - type: tour
+    short_desc: 집에서 출발
     start_time: 5:00 AM
-  - short_desc: 인천국제공항 도착
+    desc:
+    memo:
+  - type: transportation
+    short_desc: 자차 이동
+    duration: 1h
+  - type: tour
+    short_desc: 인천국제공항 도착
     start_time: 6:30 AM
+    desc: 인천국제공항 제 2터미널
+    memo:
+      - 제 2터미널 장기 예약 주차장 주차
+      - 진에어는 F 카운터
+      - 진에어 셀프 백드랍 카운터는 E 카운터
+  - type: tour
+    short_desc: 비행기 탑승
+    start_time: 8:30 AM
+    desc: 진에어 LJ233
+    memo:
+  - type: tour
+    short_desc: 오사카 간사이국제공항 도착
+    start_time: 11:00 AM
+    desc:
+    memo:
+  - type: tour
+    short_desc: 간사이국제공항에서 출발
+    start_time: 12:00 PM
+    desc:
+    memo:
+      - 하루카 실물 티켓 교환
+      - 하루카 열차 11:44 / 12:14 / 12:44
+      - 교토 역 도착 13:04 / 13:34 / 14:04
+  - type: transportation
+    short_desc: 기차 이동
+    duration: 1h 30m
+    options: 
+      - name: 하루카 열차
+        seq:
+          - name: 하루카 열차
+            duration: 1h 30m
+            start: 간사이국제공항 
+            dest: 교토 역
+            desc: 
+  - type: tour
+    short_desc: 교토 역 도착
+    start_time: 1:30 PM
+    desc:
+    memo:
+      - ICOCA 교통 카드 구매
+      - 교토 버스 1일권 구매
+  - type: transportation
+    short_desc: 호텔로 이동
+    duration: 30m
+    options: 
+      - name: 택시 이동
+        seq:
+          - name: 택시
+            duration: 15m
+            start: 교토 역 
+            dest: 오리엔탈 호텔 교토 로쿠조
+            desc: 
+      - name: 버스 이동
+        seq:
+          - name: 버스
+            duration: 15m
+            start: 교토 역 
+            dest: 오리엔탈 호텔 교토 로쿠조
+            desc: 
+  - type: tour
+    short_desc: 호텔 도착
+    start_time: 2:00 PM
+    desc: 오리엔탈 호텔 교토 로쿠조
+    memo:
+      - 체크인 15:00 시작
+  - type: meal
+    short_desc: 점심 식사
+    start_time: 2:15 PM
+    options:
+      - name: 긴조 라멘 쿠보타 본점
+        kind: 라멘
+      - name: 숯불 우나 후지 다이마루 교토 별장
+        kind: 우나기동 (장어 덮밥)
+      - name: 규카츠 교토가츠규 교토역전점
+        kind: 규카츠
+  - type: tour
+    short_desc: 호텔 체크인
+    start_time: 3:00 PM
+    desc: 오리엔탈 호텔 교토 로쿠조
+    memo:
+      - 체크인 15:00 시작
+      - 조식 결제
+      - 토미센 예약 시도
+  - type: transportation
+    short_desc: 기요미즈로 이동
+    duration: 30m
+    desc: 버스타고 기요미즈 지역으로 이동
+    options: 
+  - type: tour
+    short_desc: 청수사 관광
+    start_time: 3:30 PM
+    desc: 청수사 관광 및 산넨자카 거리 구경
+    memo: 
+      - PORTER 매장 방문
+  - type: meal
+    short_desc: 저녁 식사
+    start_time: 6:30 PM
+    desc: 
+    options:
+      - name: 토미센
+        kind: 스시
+      - name: Yakiniku Daisuke
+        kind: 야키니쿠
+  - type: tour
+    short_desc: 도지 (교왕호국사) 관광
+    start_time: 8:00 PM
+    desc: 도지 (교왕호국사) 라이트 업 행사 (야간 개장)
+    memo: 
+     - 현금 필수 / 인당 1,000엔
+  - type: tour
+    short_desc: 호텔 복귀
+    start_time: 10:00 PM
+    desc: 오리엔탈 호텔 교토 로쿠조
+    memo: 

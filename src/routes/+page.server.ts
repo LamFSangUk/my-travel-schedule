@@ -6,6 +6,10 @@ import type { PageServerLoad } from './$types';
 
 interface Schedule {
   short_desc: string;
+  type: string;
+}
+
+interface Tour extends Schedule {
   start_time: string;
 }
 
@@ -15,11 +19,16 @@ interface Tab {
 }
 
 export const load: PageServerLoad = async () => {
+  const travelFolder = path.resolve('travel');
+  const destFileContent = await fs.readFile(path.join(travelFolder, "destination.yaml"), "utf8");
+
   const tabsFolder = path.resolve('travel/days');
   const dayFileNames = await fs.readdir(tabsFolder);
 
+  // Read and parse destinations
+  const dests = yaml.load(destFileContent);
 
-  // Raed and parse all YAML files in the folder
+  // Read and parse all YAML files in the folder
 
   const tabs: Tab[] = await Promise.all(
     dayFileNames.map(async (fileName: string) => {
@@ -37,7 +46,10 @@ export const load: PageServerLoad = async () => {
     })
   )
 
-  return {tabs: tabs};
+  return {
+    destinations: dests,
+    tabs: tabs,
+  };
 }
 
 // Disable server-side rendering to get client date info.

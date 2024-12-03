@@ -1,5 +1,45 @@
 schedules:
-  - short_desc: 집에서 출발
-    start_time: 5:00 AM
-  - short_desc: 인천국제공항 도착
-    start_time: 6:30 AM
+  - type: tour
+    short_desc: 호텔에서 출발
+    start_time: 7:30 AM
+    desc: 
+    memo: 
+    - 난카이라피트 탈 필요 없음
+  - type: transportation
+    short_desc: 간사이국제공항 이동
+    duration: 1h
+    options:
+      - name: 전차 이동
+        seq:
+          - name: 미도스지 선
+            duration: 
+            start: 혼마치 역
+            dest: 난바 역 
+            desc: 
+          - name: 도보
+            duration: 
+            start: 난바 역
+            dest: 난카이난바 역 
+            desc: 
+          - name: 난카이 본선 급행
+            duration: 
+            start: 난키이난바 역
+            dest: 간사이 공항 역 
+            desc: 
+  - type: tour
+    short_desc: 간사이국제공항 도착
+    start_time: 8:30 AM
+    desc: 간사이 국제공항 제 1터미널
+    memo: 
+     - 2시간 ~ 1시간 30분 전 도착이면 충분
+     - 진에어 4층 F 카운터
+  - type: tour
+    short_desc: 비행기 탑승
+    start_time: 11:00 AM
+    desc: 진에어 LJ232
+    memo:
+  - type: tour
+    short_desc: 인천국제공항 도착
+    start_time: 1:00 PM
+    desc:
+    memo:

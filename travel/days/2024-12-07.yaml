@@ -1,5 +1,100 @@
 schedules:
-  - short_desc: 집에서 출발
-    start_time: 5:00 AM
-  - short_desc: 인천국제공항 도착
-    start_time: 6:30 AM
+  - type: tour
+    short_desc: 호텔에서 출발
+    start_time: 11:00 AM
+    desc: 
+    memo: 
+      - 호텔 조식 7시 - 10시
+      - 오전 자유시간 가능 (청수사 혹은 니시키 시장)
+  - type: transportation
+    short_desc: 교토역 이동
+    duration: 30m
+    options:
+      - name: 택시 이동
+        seq:
+          - name: 택시
+            duration: 15m
+            start: 오리엔탈 호텔 교토 로쿠조
+            dest: 교토 역 
+            desc: 
+      - name: 버스 이동
+        seq:
+          - name: 버스
+            duration: 15m
+            start: 오리엔탈 호텔 교토 로쿠조
+            dest: 교토 역 
+            desc: 
+  - type: tour
+    short_desc: 교토역 도착
+    start_time: 11:15 AM
+    desc: 
+    memo: 
+      - 교토역에서 점심 가능 (짐이 괜찮으면)
+  - type: transportation
+    short_desc: 오사카로 이동
+    duration: 1h
+    options:
+      - name: 전차 이동
+        seq:
+          - name: 도카이도-산요 본선 신쾌속
+            duration: 
+            start: 교토 역
+            dest: 오사카 역
+            desc:
+  - type: transportation
+    short_desc: 혼마치역 이동
+    duration: 15m
+    options:
+      - name: 미도스지 선 이용
+        seq:
+          - name: 도보
+            duration: 
+            start: 오사카 역 
+            dest: 우메다 역
+            desc: 
+          - name: 미도스지 선
+            duration: 
+            start: 우메다 역 
+            dest: 혼마치역
+            desc: 
+      - name: 요쓰바시 선 이용
+        seq:
+          - name: 도보
+            duration: 
+            start: 오사카 역 
+            dest: 니시우메다 역
+            desc: 
+          - name: 요쓰바시 선
+            duration: 
+            start: 니시우메다 역 
+            dest: 혼마치역
+            desc: 
+  - type: tour
+    short_desc: 호텔 도착
+    start_time: 12:30 PM
+    desc: 오사카 엑셀 호텔 도큐
+    memo:
+     - 체크인 15:00 시작
+  - type: meal
+    short_desc: 점심 식사
+    start_time: 1:00 PM
+    options:
+  - type: tour
+    short_desc: 오사카 성
+    start_time: 2:30 PM
+    desc: 
+    memo:
+  - type: tour
+    short_desc: 도톤보리 거리
+    start_time: 5:00 PM
+    desc: 
+    memo:
+  - type: meal
+    short_desc: 저녁 식사
+    start_time: 6:00 PM
+    options:
+  - type: tour
+    short_desc: 호텔 복귀
+    start_time: 8:00 PM
+    desc: 오사카 엑셀 호텔 도큐
+    memo: 
